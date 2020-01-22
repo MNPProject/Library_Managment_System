@@ -1,138 +1,99 @@
-/**
- * Book entity
- * @author Gutama
- *
- */
 public class Book {
-	
-	private String title;				// title of the book
-	private String authorFirstName;		// authors first name
-	private String authorLastName;		// authors last name
-	private String ISBN;				// ISBN (International Standard Book Number)
-	private String CallNum;				// call number (books address in the library)
-	private String publisher;			// publisher of the book
-	// private static int quantity;		// number of book
-	
-	
-	/**
-	 * 
-	 * @param title
-	 * @param callNum
-	 */
-	public Book(String title, String callNum) {
-		super();
-		this.title = title;
-		CallNum = callNum;
+	private String name, author, publisher;// holds the title, the writer, and the publisher of the book
+	private String quantity; // holds how many books this title are available in library 
+	private String issued; // holds the number of books of the same title token by students
+	private String call_No; // holds the code where you can find the book in the library 
+
+	public Book(String name, String author, String publisher, String quantity, String call_NO ) {
+		this.name=name;
+		this.author=author;
+		this.publisher=publisher;
+		this.quantity=quantity;
+		this.call_No=call_NO;
 	}
 
 	/**
-	 * 
-	 * @param title
-	 * @param authorFirstName
-	 * @param authorLastName
-	 * @param iSBN
-	 * @param callNum
-	 * @param publisher
-	 * @param quantity
+	 * @return the name
 	 */
-	public Book(String title, String authorFirstName, String authorLastName, String iSBN, String callNum,
-			String publisher, int quantity) {
-		super();
-		this.title = title;
-		this.authorFirstName = authorFirstName;
-		this.authorLastName = authorLastName;
-		ISBN = iSBN;
-		CallNum = callNum;
-		this.publisher = publisher;
-	//	this.quantity = quantity;
+	public String getName() {
+		return name;
 	}
 
 	/**
-	 * 
-	 * @return title of the book
+	 * @param name the name to set
 	 */
-	public String getTitle() {
-		return title;
-	}
-	
-	/**
-	 * 
-	 * @param title
-	 */
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	
-	/**
-	 * 
-	 * @return authors first name
-	 */
-	public String getAuthorFirstName() {
-		return authorFirstName;
-	}
-	
-	/**
-	 * 
-	 * @param authorFirstName
-	 */
-	public void setAuthorFirstName(String authorFirstName) {
-		this.authorFirstName = authorFirstName;
-	}
-	
-	/**
-	 * 
-	 * @return authors last name
-	 */
-	public String getAuthorLastName() {
-		return authorLastName;
-	}
-	
-	/**
-	 * 
-	 * @param authorLastName
-	 */
-	public void setAuthorLastName(String authorLastName) {
-		this.authorLastName = authorLastName;
-	}
-	
-	/**
-	 * 
-	 * @return ISBN
-	 */
-	public String getISBN() {
-		return ISBN;
-	}
-	
-	/**
-	 * 
-	 * @param iSBN
-	 */
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
-	}
-	
-	/**
-	 * 
-	 * @return call number of the book
-	 */
-	public String getCallNum() {
-		return CallNum;
-	}
-	
-	/**
-	 * 
-	 * @param callNum
-	 */
-	public void setCallNum(String callNum) {
-		CallNum = callNum;
+	public void setName(String name) {
+		this.name = name;
 	}
 
+	/**
+	 * @return the author
+	 */
+	public String getAuthor() {
+		return author;
+	}
+
+	/**
+	 * @param author the author to set
+	 */
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	/**
+	 * @return the publisher
+	 */
 	public String getPublisher() {
 		return publisher;
 	}
 
+	/**
+	 * @param publisher the publisher to set
+	 */
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
+	}
+
+	/**
+	 * @return the quantity
+	 */
+	public String getQuantity() {
+		return quantity;
+	}
+
+	/**
+	 * @param quantity the quantity to set
+	 */
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
+	}
+
+	/**
+	 * @return the issued
+	 */
+	public String getIssued() {
+		return issued;
+	}
+
+	/**
+	 * @param issued the issued to set
+	 */
+	public void setIssued(String issued) {
+		this.issued = issued;
+	}
+
+	/**
+	 * @return the call_No
+	 */
+	public String getCall_No() {
+		return call_No;
+	}
+
+	/**
+	 * @param call_No the call_No to set
+	 */
+	public void setCall_No(String call_No) {
+		this.call_No = call_No;
 	}
 	
 	
