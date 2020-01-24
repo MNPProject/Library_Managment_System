@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExampleFx">
+   <children>
+      <Label layoutX="212.0" layoutY="25.0" text="Add Librarian">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="addbtn" layoutX="201.0" layoutY="410.0" mnemonicParsing="false" onAction="#librarianadded" text="Add Librarian">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="backbtn" layoutX="232.0" layoutY="455.0" mnemonicParsing="false" onAction="#adminSection" text="Back">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <VBox layoutX="101.0" layoutY="72.0" prefHeight="302.0" prefWidth="100.0" spacing="14.0">
+         <children>
+            <Label text="Name:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="12.0" />
+               </padding>
+            </Label>
+            <Label text="Password: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="12.0" />
+               </padding>
+            </Label>
+            <Label text="Email">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="12.0" />
+               </padding>
+            </Label>
+            <Label text="Address: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="12.0" />
+               </padding>
+            </Label>
+            <Label text="City: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="12.0" />
+               </padding>
+            </Label>
+            <Label text="Contact No: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="12.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="300.0" layoutY="72.0" prefHeight="302.0" prefWidth="160.0" spacing="13.0">
+         <children>
+            <TextField fx:id="LibName" promptText="name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="libPass" prefHeight="15.0" prefWidth="100.0" promptText="password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="libEmail" promptText="Email">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="libAddress" promptText="Address">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="LibCity" promptText="City">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="libContactNo" promptText="000000000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

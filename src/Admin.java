@@ -1,7 +1,7 @@
 
 public class Admin {
 	private String name;		// admins name
-	private String Password;	// admins password
+	private String password;	// admins password
 	
 	
 	/**
@@ -24,10 +24,11 @@ public class Admin {
 	 * @param password
 	 * @param name
 	 */
-	public Admin(String password, String name) {
+	public Admin(String name, String password) {
 		super();
-		Password = password;
 		this.name = name;
+		this.password = password;
+		
 	}
 
 	/**
@@ -35,7 +36,7 @@ public class Admin {
 	 * @return
 	 */
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 
 	/**
@@ -43,7 +44,7 @@ public class Admin {
 	 * @param password
 	 */
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
 
 	/**
