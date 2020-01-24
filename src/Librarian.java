@@ -15,8 +15,8 @@ public class Librarian {
 	 * @param ID         librarian address
 	 * @param contactNum librarian contact number
 	 */
-	public Librarian(String name, String password, String email, String address, String city, long ID,
-			long contactNum) {
+	public Librarian(String name, String password, String email, String address, String city, String ID,
+			String contactNum) {
 		this.name = name;
 		this.password = password;
 		this.email = email;
