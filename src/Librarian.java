@@ -126,5 +126,10 @@ public class Librarian {
 	public void setContactNum(String string) {
 		this.contactNum = string;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
 
 }

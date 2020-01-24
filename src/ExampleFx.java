@@ -16,7 +16,9 @@ import javafx.stage.Stage;
 
 public class ExampleFx extends Application{
 
-	// may not be necessary 
+	// Array List of librarian
+	// TODO this should be improved
+	ArrayList<Librarian> libs = new ArrayList<>();
 	
 	
 	@Override
@@ -93,15 +95,22 @@ public class ExampleFx extends Application{
 		
 		// else shows error
 		if(!adminFound) {
-			Alert alert = new Alert(AlertType.ERROR);
-			alert.setTitle("Error Dialog");
-			alert.setHeaderText("Look, an Error Dialog");
-			alert.setContentText("password is:"+adminList.get(0).getName()+" "+adminList.get(0).getPassword());
-
-			alert.showAndWait();
+//			Alert alert = new Alert(AlertType.ERROR);
+//			alert.setTitle("Error Dialog");
+//			alert.setHeaderText("password incorrect");
+//			alert.setContentText("password is:"+adminList.get(0).getName()+" "+adminList.get(0).getPassword());
+//
+//			alert.showAndWait();
+			alert("password incorrect");
 		}
 		
 		
+	}
+	public void alert(String message) {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Error Dialog");
+		alert.setHeaderText(message);
+		alert.showAndWait();
 	}
 	 public void adminSection(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("AdminSection.fxml"));
@@ -111,7 +120,50 @@ public class ExampleFx extends Application{
 		stage.setScene(adminSection);
 		stage.show();
 	}
+	 public void adminAddForm(ActionEvent event) throws IOException {
+			Parent root = FXMLLoader.load(getClass().getResource("AddLibrarian.fxml"));
+			Scene adminSection = new Scene(root);
+			
+			Stage stage = getStage(event);
+			stage.setScene(adminSection);
+			stage.show();
+	}
+
+	@FXML TextField LibName;
+	@FXML PasswordField libPass;
+	@FXML TextField libEmail;
+	@FXML TextField libAddress;
+	@FXML TextField LibCity;
+	@FXML TextField libContactNo;
 	
+	
+	@FXML public void librarianadded(ActionEvent event) {
+		// assuming all input is right
+		Librarian librarian = new Librarian();
+		librarian.setName(LibName.getText());
+		librarian.setPassword(libPass.getText());
+		librarian.setEmail(libEmail.getText());
+		librarian.setAddress(libAddress.getText());
+		librarian.setCity(LibCity.getText());
+		librarian.setContactNum(libContactNo.getText());
+		
+		// once added alert success
+		
+		libs.add(librarian);
+		for (Librarian lib : libs) {
+			System.out.println(lib.toString());
+		}
+		
+		alert("Librarian added Successfully");
+		// TODO validate entries.
+		// what to consider
+		/*
+		 * 1. user name should be unique
+		 * 2. password should be validated
+		 * 3. email should be unique
+		 * 4. other things 
+		 */
+	}
 	public void LibrarianSection(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
 		Scene scene = new Scene(root);
