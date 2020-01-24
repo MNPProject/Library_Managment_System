@@ -2,7 +2,7 @@
 public class Librarian {
 
 	private String name, password, email, address, city;
-	private long ID, contactNum;
+	private String ID, contactNum;
 
 	/**
 	 * Construct a librarian using the specfied field
@@ -25,7 +25,10 @@ public class Librarian {
 		this.ID = ID;
 		this.contactNum = contactNum;
 	}
-
+	
+	public Librarian() {
+		
+	}
 	/**
 	 * @return the name
 	 */
@@ -99,29 +102,29 @@ public class Librarian {
 	/**
 	 * @return the iD
 	 */
-	public long getID() {
+	public String getID() {
 		return ID;
 	}
 
 	/**
 	 * @param iD the iD to set
 	 */
-	public void setID(long iD) {
+	public void setID(String iD) {
 		ID = iD;
 	}
 
 	/**
 	 * @return the contactNum
 	 */
-	public long getContactNum() {
+	public String getContactNum() {
 		return contactNum;
 	}
 
 	/**
-	 * @param contactNum the contactNum to set
+	 * @param string the contactNum to set
 	 */
-	public void setContactNum(long contactNum) {
-		this.contactNum = contactNum;
+	public void setContactNum(String string) {
+		this.contactNum = string;
 	}
 
 }
