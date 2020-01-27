@@ -1,4 +1,5 @@
 
+
 public class Admin {
 	private String name;		// admins name
 	private String password;	// admins password
