@@ -1,55 +1,78 @@
 
+
 public class Student {
 
-	private String name;
-	private int ID;
-	private long contactNum;
-	private String email;
-	
+	private String firstName;
+	private String lastName;
+	private String Id;
+	private String contactNum;
 	/**
-	 * Constructor for the student
-	 * @param name name of the student
-	 * @param ID the student ID
-	 * @param contactNum the student contact number
-	 * @param email the student email addres
+	 * @param firstName
+	 * @param lastName
+	 * @param id
+	 * @param contactNum
 	 */
-	public Student(String name, int ID, long contactNum, String email) {
-		this.name = name;
-		this.ID = ID;
+	public Student(String firstName, String lastName, String id, String contactNum) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		Id = id;
 		this.contactNum = contactNum;
-		this.email = email;
 	}
-
-	public String getName() {
-		return name;
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName() {
+		return firstName;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-
-	public int getID() {
-		return ID;
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
 	}
-
-	public void setID(int iD) {
-		ID = iD;
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-
-	public long getContactNum() {
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return Id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(String id) {
+		Id = id;
+	}
+	/**
+	 * @return the contactNum
+	 */
+	public String getContactNum() {
 		return contactNum;
 	}
-
-	public void setContactNum(long contactNum) {
+	/**
+	 * @param contactNum the contactNum to set
+	 */
+	public void setContactNum(String contactNum) {
 		this.contactNum = contactNum;
 	}
-
-	public String getEmail() {
-		return email;
+	@Override
+	public String toString() {
+		return "STUDENTFIRSTNAME = " + firstName + ", STUDENTLASTNAME = " + lastName + ", ID = " + Id + ", CONTANCTNUM = "
+				+ contactNum + "\n---------------------------------------------------------------------------------"
+						+ "---------------------------";
 	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
 	
 }

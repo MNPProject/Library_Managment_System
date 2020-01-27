@@ -1,100 +1,146 @@
+
+
+
 public class Book {
-	private String name, author, publisher;// holds the title, the writer, and the publisher of the book
-	private String quantity; // holds how many books this title are available in library 
-	private String issued; // holds the number of books of the same title token by students
-	private String call_No; // holds the code where you can find the book in the library 
 
-	public Book(String name, String author, String publisher, String quantity, String call_NO ) {
-		this.name=name;
-		this.author=author;
-		this.publisher=publisher;
-		this.quantity=quantity;
-		this.call_No=call_NO;
-	}
-
+	private String title;
+	private String callNo;
+	private String author;
+	private String publisher;
+	private int quantity;
+	private int issued;
 	/**
-	 * @return the name
+	 * @param title
+	 * @param callNo
+	 * @param author
+	 * @param publisher
+	 * @param quantity
 	 */
-	public String getName() {
-		return name;
+	public Book(String title, String callNo, String author, String publisher, int quantity) {
+		super();
+		this.title = title;
+		this.callNo = callNo;
+		this.author = author;
+		this.publisher = publisher;
+		this.quantity = quantity;
 	}
-
 	/**
-	 * @param name the name to set
+	 * @return the title
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public String getTitle() {
+		return title;
 	}
-
+	/**
+	 * @param title the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	/**
+	 * @return the callNo
+	 */
+	public String getCallNo() {
+		return callNo;
+	}
+	/**
+	 * @param callNo the callNo to set
+	 */
+	public void setCallNo(String callNo) {
+		this.callNo = callNo;
+	}
 	/**
 	 * @return the author
 	 */
 	public String getAuthor() {
 		return author;
 	}
-
 	/**
 	 * @param author the author to set
 	 */
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-
 	/**
 	 * @return the publisher
 	 */
 	public String getPublisher() {
 		return publisher;
 	}
-
 	/**
 	 * @param publisher the publisher to set
 	 */
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
-
 	/**
 	 * @return the quantity
 	 */
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
-
 	/**
 	 * @param quantity the quantity to set
 	 */
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
+	
+	public void subQuantityBy1() {
+		quantity -= 1 ;
+	}
+	
+	public void addQuantity() {
+		quantity += 1;
+	}
+	@Override
+	public String toString() {
+		return  " [TITLE = " + title + ", CALL_NUM = " + callNo + ", AUTHOR = " + author + ", PUBLISHER = " + publisher
+				+ ", QUANTITY = " + quantity + ", ISSUED = " + issued + "]\n----------------------------------------------------------------------------------------------"
+						+ "----------------";
+	}
+	
 	/**
 	 * @return the issued
 	 */
-	public String getIssued() {
+	public int getIssued() {
 		return issued;
 	}
-
 	/**
 	 * @param issued the issued to set
 	 */
-	public void setIssued(String issued) {
+	public void setIssued(int issued) {
 		this.issued = issued;
 	}
-
-	/**
-	 * @return the call_No
-	 */
-	public String getCall_No() {
-		return call_No;
-	}
-
-	/**
-	 * @param call_No the call_No to set
-	 */
-	public void setCall_No(String call_No) {
-		this.call_No = call_No;
+	
+	public void addIssuedBook() {
+		issued = issued + 1;
 	}
 	
+	public void subIssuedBook() {
+		issued -= 1;
+	}
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((callNo == null) ? 0 : callNo.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		if (callNo == null) {
+			if (other.callNo != null)
+				return false;
+		} else if (!callNo.equals(other.callNo))
+			return false;
+		return true;
+	}
 }
