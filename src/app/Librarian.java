@@ -1,3 +1,4 @@
+package app;
 
 public class Librarian {
 
@@ -5,7 +6,7 @@ public class Librarian {
 	private String ID, contactNum;
 
 	/**
-	 * Construct a librarian using the specfied field
+	 * Construct a librarian using the specified field
 	 * 
 	 * @param name       name of the librarian
 	 * @param password   librarian password

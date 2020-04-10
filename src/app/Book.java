@@ -1,3 +1,4 @@
+package app;
 /**
  * Book entity
  * @author Gutama

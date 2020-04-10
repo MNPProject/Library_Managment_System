@@ -1,3 +1,4 @@
+package app;
 
 public class Admin {
 	private String name;		// admins name
