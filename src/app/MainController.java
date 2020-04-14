@@ -1,5 +1,4 @@
 package app;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.EventObject;
@@ -14,7 +13,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
+import app.Main;;
+/**
+ * Controller for the first View.
+ * transition to adminLoginfrom or Librarian login form
+ * @author Gutama
+ *
+ */
 public class MainController {
 
     @FXML
@@ -28,23 +33,25 @@ public class MainController {
 
     @FXML
     void LibrarianLogin(ActionEvent event) throws IOException {
-    	File file = new File("app/resources/LibrarianView.fxml");
+    	File file = new File("app/LibrarianLoginForm.fxml");
     	System.out.println(file.getPath().isEmpty());
+    	System.out.println(file.exists()+"does it?");
     	
+    	Parent root = FXMLLoader.load(getClass().getResource("LibrarianLoginForm.fxml"));
     	
-    	
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource(file.getPath()));
-    	// loader.setRoot(this);
-    	Parent root = (Parent)loader.load();
-    	Scene scene = new Scene(root,600,600);
+    	 Scene scene = new Scene(root);
+    	 
     	Stage stage = (Stage)((Node)((EventObject) event).getSource()).getScene().getWindow();
-
-    	stage.close();
+    	
+    	stage.setScene(scene);
     }
 
     @FXML
-    void adminLogin(ActionEvent event) {
-
+    void adminLogin(ActionEvent event) throws IOException {
+    	Parent root = FXMLLoader.load(getClass().getResource("AdminLoginForm.fxml"));
+    	Scene scene = new Scene(root,800,800);
+    	Stage stage = (Stage) MainView.getScene().getWindow();
+    	stage.setScene(scene);
     }
 
 }

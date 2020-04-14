@@ -5,24 +5,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExampleFx">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AdminSectionController">
    <children>
       <Button fx:id="addLib" layoutX="240.0" layoutY="123.0" mnemonicParsing="false" onAction="#adminAddForm" text="Add Librarian">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="238.0" layoutY="181.0" mnemonicParsing="false" text="View Librarian">
+      <Button fx:id="ViewLibrarian" layoutX="238.0" layoutY="181.0" mnemonicParsing="false" onAction="#ViewLibrarian" text="View Librarian">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="232.0" layoutY="244.0" mnemonicParsing="false" text="Delete Librarian">
+      <Button fx:id="deleteLibrarian" layoutX="232.0" layoutY="244.0" mnemonicParsing="false" onAction="#deleteLibrarian" text="Delete Librarian">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="263.0" layoutY="309.0" mnemonicParsing="false" text="Logout">
+      <Button fx:id="logout" layoutX="263.0" layoutY="309.0" mnemonicParsing="false" onAction="#logout" text="Logout">
          <font>
             <Font size="16.0" />
          </font>
