@@ -40,28 +40,43 @@ public class LibrarianSectionController {
     }
 
     @FXML
-    void issueBookBtn(ActionEvent event) {
-
+    void issueBookBtn(ActionEvent event) throws IOException{
+    	Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
+    	Scene scene = new Scene(root);
+    	Stage stage = (Stage) addBookBtn.getScene().getWindow();
+    	stage.setScene(scene);
     }
 
     @FXML
-    void issuedBooks(ActionEvent event) {
-
+    void issuedBooks(ActionEvent event) throws IOException {
+    	Parent root = FXMLLoader.load(getClass().getResource("IssuedBooks.fxml"));
+    	Scene scene = new Scene(root);
+    	Stage stage = (Stage) addBookBtn.getScene().getWindow();
+    	stage.setScene(scene);
     }
 
     @FXML
-    void logout(ActionEvent event) {
-
+    void logout(ActionEvent event) throws IOException{
+    	Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
+    	Scene scene = new Scene(root);
+    	Stage stage = (Stage) addBookBtn.getScene().getWindow();
+    	stage.setScene(scene);
     }
 
     @FXML
-    void returnBooksBtn(ActionEvent event) {
-
+    void returnBooksBtn(ActionEvent event) throws IOException {
+    	Parent root = FXMLLoader.load(getClass().getResource("ReturnBooks.fxml"));
+    	Scene scene = new Scene(root);
+    	Stage stage = (Stage) addBookBtn.getScene().getWindow();
+    	stage.setScene(scene);
     }
 
     @FXML
-    void viewBooks(ActionEvent event) {
-
+    void viewBooks(ActionEvent event) throws IOException {
+    	Parent root = FXMLLoader.load(getClass().getResource("ViewBook.fxml"));
+    	Scene scene = new Scene(root);
+    	Stage stage = (Stage) addBookBtn.getScene().getWindow();
+    	stage.setScene(scene);
     }
 
 }

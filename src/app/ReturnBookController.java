@@ -1,16 +1,29 @@
 package app;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 
-import javafx.fxml.Initializable;
+public class ReturnBookController {
 
-public class ReturnBookController implements Initializable {
+    @FXML
+    private AnchorPane anchorPane;
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
-	}
+    @FXML
+    private Button returnBookBtn;
+
+    @FXML
+    private Button backBtn;
+
+    @FXML
+    void back(ActionEvent event) {
+
+    }
+
+    @FXML
+    void retunBook(ActionEvent event) {
+
+    }
 
 }
