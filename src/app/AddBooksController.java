@@ -55,7 +55,7 @@ public class AddBooksController {
     @FXML
     void back(ActionEvent event) throws IOException{
     	Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
-    	Scene scene = new Scene(root);
+    	Scene scene = new Scene(root, 600, 600);
     	Stage stage = (Stage) pane.getScene().getWindow();
     	stage.setScene(scene);
     }

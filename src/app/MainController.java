@@ -39,7 +39,7 @@ public class MainController {
     	
     	Parent root = FXMLLoader.load(getClass().getResource("LibrarianLoginForm.fxml"));
     	
-    	 Scene scene = new Scene(root);
+    	 Scene scene = new Scene(root,600,600);
     	 
     	Stage stage = (Stage)((Node)((EventObject) event).getSource()).getScene().getWindow();
     	
@@ -49,7 +49,7 @@ public class MainController {
     @FXML
     void adminLogin(ActionEvent event) throws IOException {
     	Parent root = FXMLLoader.load(getClass().getResource("AdminLoginForm.fxml"));
-    	Scene scene = new Scene(root,800,800);
+    	Scene scene = new Scene(root,600,600);
     	Stage stage = (Stage) MainView.getScene().getWindow();
     	stage.setScene(scene);
     }

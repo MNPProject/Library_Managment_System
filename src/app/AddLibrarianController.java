@@ -40,11 +40,16 @@ public class AddLibrarianController {
     @FXML
     private TextField libContactNo;
 
+    /**
+     * @author 
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void add(ActionEvent event) throws IOException {
     	Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Librarian Added successfully");
     	
-    
+   
     	alert.showAndWait();
     	
     	
@@ -53,7 +58,7 @@ public class AddLibrarianController {
     @FXML
     void back(ActionEvent event) throws IOException{
     	Parent root = FXMLLoader.load(getClass().getResource("AdminSection.fxml"));
-    	Scene scene = new Scene(root);
+    	Scene scene = new Scene(root, 600, 600);
     	Stage stage = (Stage) backbtn.getScene().getWindow();
     	stage.setScene(scene);
     }

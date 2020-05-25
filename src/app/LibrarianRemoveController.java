@@ -35,7 +35,7 @@ public class LibrarianRemoveController {
     	// deletion successfully 
     	
     	Parent root = FXMLLoader.load(getClass().getResource("AdminSection.fxml"));
-    	Scene scene = new Scene(root);
+    	Scene scene = new Scene(root,600,600);
     	Stage stage = (Stage) pane.getScene().getWindow();
     	stage.setScene(scene);
     }

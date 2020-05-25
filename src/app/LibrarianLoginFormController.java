@@ -37,7 +37,7 @@ public class LibrarianLoginFormController {
     @FXML
     void login(ActionEvent event) throws IOException {
     	Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
-    	Scene scene = new Scene(root,800,800);
+    	Scene scene = new Scene(root,600,600);
     	Stage stage = (Stage) pane.getScene().getWindow();
     	stage.setScene(scene);
     }

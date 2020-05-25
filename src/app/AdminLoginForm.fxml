@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AdminLoginFormController">
+<AnchorPane maxHeight="600.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AdminLoginFormController">
    <children>
-      <Label layoutX="93.0" layoutY="117.0" text="Enter Name">
+      <Label layoutX="34.0" layoutY="111.0" text="Enter Name">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="93.0" layoutY="155.0" text="Enter Password">
+      <Label layoutX="34.0" layoutY="179.0" text="Enter Password">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <PasswordField fx:id="adminPassword" layoutX="235.0" layoutY="154.0" promptText="password">
+      <PasswordField fx:id="adminPassword" layoutX="188.0" layoutY="173.0" promptText="password">
          <font>
             <Font size="16.0" />
          </font>
       </PasswordField>
-      <TextField fx:id="adminName" layoutX="235.0" layoutY="117.0" promptText="name">
+      <TextField fx:id="adminName" layoutX="188.0" layoutY="105.0" promptText="name">
          <font>
             <Font size="16.0" />
          </font>
@@ -34,7 +34,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="adminLogbtn" layoutX="274.0" layoutY="239.0" mnemonicParsing="false" onAction="#adminLoginCheck" text="Login">
+      <Button fx:id="adminLogbtn" layoutX="257.0" layoutY="251.0" mnemonicParsing="false" onAction="#adminLoginCheck" text="Login">
          <font>
             <Font size="16.0" />
          </font>

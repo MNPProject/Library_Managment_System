@@ -44,7 +44,7 @@ public class AdminSectionController {
     @FXML
     void deleteLibrarian(ActionEvent event) throws IOException {
     	Parent root = FXMLLoader.load(getClass().getResource("LibrarianRemove.fxml"));
-    	Scene scene = new Scene(root);
+    	Scene scene = new Scene(root, 600, 600);
     	Stage stage = (Stage) addLib.getScene().getWindow();
     	stage.setScene(scene);
     }
