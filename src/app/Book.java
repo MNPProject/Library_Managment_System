@@ -1,140 +1,155 @@
+<<<<<<< HEAD:src/app/Book.java
 package app;
 /**
  * Book entity
  * @author Gutama
  *
  */
-public class Book {
-	
-	private String title;				// title of the book
-	private String authorFirstName;		// authors first name
-	private String authorLastName;		// authors last name
-	private String ISBN;				// ISBN (International Standard Book Number)
-	private String CallNum;				// call number (books address in the library)
-	private String publisher;			// publisher of the book
-	// private static int quantity;		// number of book
-	
-	
-	/**
-	 * 
-	 * @param title
-	 * @param callNum
-	 */
-	public Book(String title, String callNum) {
-		super();
-		this.title = title;
-		CallNum = callNum;
-	}
+=======
 
+
+
+>>>>>>> master:src/Book.java
+public class Book {
+
+	private String title;
+	private String callNo;
+	private String author;
+	private String publisher;
+	private int quantity;
+	private int issued;
 	/**
-	 * 
 	 * @param title
-	 * @param authorFirstName
-	 * @param authorLastName
-	 * @param iSBN
-	 * @param callNum
+	 * @param callNo
+	 * @param author
 	 * @param publisher
 	 * @param quantity
 	 */
-	public Book(String title, String authorFirstName, String authorLastName, String iSBN, String callNum,
-			String publisher, int quantity) {
+	public Book(String title, String callNo, String author, String publisher, int quantity) {
 		super();
 		this.title = title;
-		this.authorFirstName = authorFirstName;
-		this.authorLastName = authorLastName;
-		ISBN = iSBN;
-		CallNum = callNum;
+		this.callNo = callNo;
+		this.author = author;
 		this.publisher = publisher;
-	//	this.quantity = quantity;
+		this.quantity = quantity;
 	}
-
 	/**
-	 * 
-	 * @return title of the book
+	 * @return the title
 	 */
 	public String getTitle() {
 		return title;
 	}
-	
 	/**
-	 * 
-	 * @param title
+	 * @param title the title to set
 	 */
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
 	/**
-	 * 
-	 * @return authors first name
+	 * @return the callNo
 	 */
-	public String getAuthorFirstName() {
-		return authorFirstName;
+	public String getCallNo() {
+		return callNo;
 	}
-	
 	/**
-	 * 
-	 * @param authorFirstName
+	 * @param callNo the callNo to set
 	 */
-	public void setAuthorFirstName(String authorFirstName) {
-		this.authorFirstName = authorFirstName;
+	public void setCallNo(String callNo) {
+		this.callNo = callNo;
 	}
-	
 	/**
-	 * 
-	 * @return authors last name
+	 * @return the author
 	 */
-	public String getAuthorLastName() {
-		return authorLastName;
+	public String getAuthor() {
+		return author;
 	}
-	
 	/**
-	 * 
-	 * @param authorLastName
+	 * @param author the author to set
 	 */
-	public void setAuthorLastName(String authorLastName) {
-		this.authorLastName = authorLastName;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
-	
 	/**
-	 * 
-	 * @return ISBN
+	 * @return the publisher
 	 */
-	public String getISBN() {
-		return ISBN;
-	}
-	
-	/**
-	 * 
-	 * @param iSBN
-	 */
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
-	}
-	
-	/**
-	 * 
-	 * @return call number of the book
-	 */
-	public String getCallNum() {
-		return CallNum;
-	}
-	
-	/**
-	 * 
-	 * @param callNum
-	 */
-	public void setCallNum(String callNum) {
-		CallNum = callNum;
-	}
-
 	public String getPublisher() {
 		return publisher;
 	}
-
+	/**
+	 * @param publisher the publisher to set
+	 */
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
+	/**
+	 * @return the quantity
+	 */
+	public int getQuantity() {
+		return quantity;
+	}
+	/**
+	 * @param quantity the quantity to set
+	 */
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 	
+	public void subQuantityBy1() {
+		quantity -= 1 ;
+	}
 	
+	public void addQuantity() {
+		quantity += 1;
+	}
+	@Override
+	public String toString() {
+		return  " [TITLE = " + title + ", CALL_NUM = " + callNo + ", AUTHOR = " + author + ", PUBLISHER = " + publisher
+				+ ", QUANTITY = " + quantity + ", ISSUED = " + issued + "]\n----------------------------------------------------------------------------------------------"
+						+ "----------------";
+	}
+	
+	/**
+	 * @return the issued
+	 */
+	public int getIssued() {
+		return issued;
+	}
+	/**
+	 * @param issued the issued to set
+	 */
+	public void setIssued(int issued) {
+		this.issued = issued;
+	}
+	
+	public void addIssuedBook() {
+		issued = issued + 1;
+	}
+	
+	public void subIssuedBook() {
+		issued -= 1;
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((callNo == null) ? 0 : callNo.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		if (callNo == null) {
+			if (other.callNo != null)
+				return false;
+		} else if (!callNo.equals(other.callNo))
+			return false;
+		return true;
+	}
 }
