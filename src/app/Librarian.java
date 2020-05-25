@@ -1,3 +1,4 @@
+package app;
 
 
 public class Librarian {
@@ -9,12 +10,24 @@ public class Librarian {
 	private String city;
 	private String contactNum;
 	/**
+<<<<<<< HEAD:src/app/Librarian.java
+	 * Construct a librarian using the specified field
+	 * 
+	 * @param name       name of the librarian
+	 * @param password   librarian password
+	 * @param email      librarian email
+	 * @param address    librarian address
+	 * @param city       librarian city
+	 * @param ID         librarian address
+	 * @param contactNum librarian contact number
+=======
 	 * @param firstName
 	 * @param lastName
 	 * @param email
 	 * @param address
 	 * @param city
 	 * @param contactNum
+>>>>>>> master:src/Librarian.java
 	 */
 	public Librarian(String firstName, String lastName, String email, String address, String city, String contactNum) {
 		super();

@@ -9,18 +9,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExampleFx">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AddLibrarianController">
    <children>
       <Label layoutX="212.0" layoutY="25.0" text="Add Librarian">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="addbtn" layoutX="201.0" layoutY="410.0" mnemonicParsing="false" onAction="#librarianadded" text="Add Librarian">
+      <Button fx:id="addbtn" layoutX="201.0" layoutY="410.0" mnemonicParsing="false" onAction="#add" text="Add Librarian">
          <font>
             <Font size="16.0" />
          </font></Button>
-      <Button fx:id="backbtn" layoutX="232.0" layoutY="455.0" mnemonicParsing="false" onAction="#adminSection" text="Back">
+      <Button fx:id="backbtn" layoutX="232.0" layoutY="455.0" mnemonicParsing="false" onAction="#back" text="Back">
          <font>
             <Font size="16.0" />
          </font></Button>
