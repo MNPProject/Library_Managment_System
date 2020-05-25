@@ -1,15 +1,10 @@
-<<<<<<< HEAD:src/app/Book.java
 package app;
 /**
  * Book entity
  * @author Gutama
  *
  */
-=======
 
-
-
->>>>>>> master:src/Book.java
 public class Book {
 
 	private String title;
