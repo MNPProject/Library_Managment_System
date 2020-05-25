@@ -4,10 +4,6 @@ package app;
  * @author Gutama
  *
  */
-<<<<<<< HEAD
-=======
-
->>>>>>> gutama
 public class Book {
 
 	private String title;
