@@ -1,5 +1,10 @@
 # untrack binary
 src/books.ser
+.idea/LibraryManagmentSystem.iml
+Librarian.txt
+src/module-info.java
+
+
 
 # Compiled class file
 *.class
