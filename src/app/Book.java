@@ -1,10 +1,12 @@
 package app;
+
+import java.io.Serializable;
+
 /**
  * Book entity
- * @author Gutama
  *
  */
-public class Book {
+public class Book implements Serializable{
 
 	private String title;
 	private String callNo;
@@ -26,6 +28,9 @@ public class Book {
 		this.author = author;
 		this.publisher = publisher;
 		this.quantity = quantity;
+	}
+	public Book() {
+		// TODO Auto-generated constructor stub
 	}
 	/**
 	 * @return the title
@@ -99,7 +104,7 @@ public class Book {
 	public String toString() {
 		return  " [TITLE = " + title + ", CALL_NUM = " + callNo + ", AUTHOR = " + author + ", PUBLISHER = " + publisher
 				+ ", QUANTITY = " + quantity + ", ISSUED = " + issued + "]\n----------------------------------------------------------------------------------------------"
-						+ "----------------";
+						+ "----------------\n";
 	}
 	
 	/**

@@ -34,12 +34,21 @@ public class LibrarianLoginFormController {
     @FXML
     private Button loginBtn;
 
+    // ArrayLIst<Librain> libs.
+    
     @FXML
     void login(ActionEvent event) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
-    	Scene scene = new Scene(root,600,600);
-    	Stage stage = (Stage) pane.getScene().getWindow();
-    	stage.setScene(scene);
+    	
+    	
+    	
+    	// we give you a list of librarins
+	    	// 
+	    	Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
+	    	Scene scene = new Scene(root,600,600);
+	    	Stage stage = (Stage) pane.getScene().getWindow();
+	    	stage.setScene(scene);
+	    	
+	    
     }
 
 }
