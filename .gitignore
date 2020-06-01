@@ -1,6 +1,7 @@
 # untrack binary
 src/books.ser
-.idea/LibraryManagmentSystem.iml
+.idea/
+LibraryManagmentSystem.iml
 Librarian.txt
 src/module-info.java
 

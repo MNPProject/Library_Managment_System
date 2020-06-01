@@ -1,7 +1,9 @@
 package app;
 
 
-public class Librarian {
+import java.io.Serializable;
+
+public class Librarian implements Serializable {
 
 	private String firstName;
 	private String lastName;
@@ -9,6 +11,7 @@ public class Librarian {
 	private String address;
 	private String city;
 	private String contactNum;
+	private int ID;
 	/**
 <<<<<<< HEAD:src/app/Librarian.java
 	 * Construct a librarian using the specified field
@@ -38,6 +41,15 @@ public class Librarian {
 		this.city = city;
 		this.contactNum = contactNum;
 	}
+
+	public int getId() {
+		return ID;
+	}
+
+	public void setID(int ID) {
+		this.ID = ID;
+	}
+
 	/**
 	 * @return the firstName
 	 */
