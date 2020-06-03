@@ -37,13 +37,12 @@ public class LibrarianLoginFormController {
     @FXML
     private Button loginBtn;
 
-	
-
     @FXML
     
     
     void login(ActionEvent event) throws IOException {
     	
+
     	class Employee {
         	String username;
         	String password;
@@ -92,6 +91,17 @@ public class LibrarianLoginFormController {
 				}
 		}
 		
+    	
+    	
+    	// we give you a list of librarins
+	    	// 
+	    	Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
+	    	Scene scene = new Scene(root,600,600);
+	    	Stage stage = (Stage) pane.getScene().getWindow();
+	    	stage.setScene(scene);
+	    	
+	    
+
     }
 }
    
