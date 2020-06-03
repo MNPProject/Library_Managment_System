@@ -52,6 +52,7 @@ public class MainController {
     	Scene scene = new Scene(root,600,600);
     	Stage stage = (Stage) MainView.getScene().getWindow();
     	stage.setScene(scene);
+    	// (event) => {x....}
     }
-
+    
 }

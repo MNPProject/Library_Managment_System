@@ -31,6 +31,15 @@ public class AdminLoginFormController {
     ArrayList<Admin> admins = new ArrayList<>();
     @FXML
     void adminLoginCheck(ActionEvent event) throws IOException {
+    	    	
+    	Admin admin1 = new Admin();
+    	
+    	// 
+    	// databaseLoader
+    	
+    	// give as an array list of admins.
+    	// give as an array list of 
+    	// write require it to write onto a file.<admins, librarins, books> 
     	
     	// Admin a = new Admin('name','pass');
     	
