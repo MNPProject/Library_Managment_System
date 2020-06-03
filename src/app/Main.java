@@ -14,6 +14,7 @@ import javafx.stage.Stage;
  * @author Gutama
  *
  */
+// --module-path "C:\Users\ahadu yilma\Desktop\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml
 public class Main extends Application{
 
 	@Override
