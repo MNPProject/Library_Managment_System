@@ -19,12 +19,12 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <PasswordField layoutX="235.0" layoutY="154.0" promptText="password">
+      <PasswordField fx:id="password" layoutX="235.0" layoutY="154.0" promptText="password">
          <font>
             <Font size="16.0" />
          </font>
       </PasswordField>
-      <TextField layoutX="235.0" layoutY="117.0" promptText="name">
+      <TextField fx:id="name" layoutX="235.0" layoutY="117.0" promptText="name">
          <font>
             <Font size="16.0" />
          </font>
