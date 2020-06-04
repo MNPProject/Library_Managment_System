@@ -34,8 +34,14 @@ public class LibrarianLoginFormController {
 	@FXML
 	private TextField name;
 
+<<<<<<< HEAD
 	@FXML
 	private Button loginBtn;
+=======
+    @FXML 
+    void login(ActionEvent event) throws IOException {
+    	
+>>>>>>> 0645b7efa9069990b2ee3f6ed43c8c3fbf5cfe1e
 
 	@FXML
 

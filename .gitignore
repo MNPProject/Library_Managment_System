@@ -1,9 +1,19 @@
 # untrack binary
 src/books.ser
-.idea/
-LibraryManagmentSystem.iml
 src/module-info.java
 Librarian.txt
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+
+# eclipse
+.classpath
+.project
+.settings/
+
 
 
 # Compiled class file

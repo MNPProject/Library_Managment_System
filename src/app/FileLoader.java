@@ -39,5 +39,25 @@ public  class FileLoader {
         }
         return listOfLibrarian;
     }
+    
+	public static ArrayList<Book> loadBooks(String fileName) {
+
+		ArrayList<Book> books2 = new ArrayList<>();
+		// FileInputStream fis;
+		try {
+			FileInputStream fis = new FileInputStream("src/books.ser");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			books2 = (ArrayList<Book>) ois.readObject(); // SuppressWarnings
+
+			fis.close();
+			ois.close();
+
+		} catch (IOException | ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return books2;
+	}
 
 }
