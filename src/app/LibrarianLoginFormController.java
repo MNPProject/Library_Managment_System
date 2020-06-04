@@ -34,23 +34,13 @@ public class LibrarianLoginFormController {
 	@FXML
 	private TextField name;
 
-<<<<<<< HEAD
 	@FXML
 	private Button loginBtn;
-=======
-    @FXML 
-    void login(ActionEvent event) throws IOException {
-    	
->>>>>>> 0645b7efa9069990b2ee3f6ed43c8c3fbf5cfe1e
 
 	@FXML
 
 	void login(ActionEvent event) throws IOException {
-		/* Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
-		Scene scene = new Scene(root, 600, 600);
-		Stage stage = (Stage) pane.getScene().getWindow();
-		stage.setScene(scene);*/
-		
+
 		List<Librarian> employeeList = FileLoader.loadLibrarianFromFile();
 		String username = name.getText();
 		String password_ = password.getText();
@@ -59,34 +49,22 @@ public class LibrarianLoginFormController {
 			System.out.println("Alert");
 			Alert alert = new Alert(Alert.AlertType.ERROR, "The librarian database is empty");
 			alert.showAndWait();
-		} 
-		else if (!employeeList.isEmpty()) {
-			/*for (int i = 0; i < employeeList.size(); i++) {
-				if (username.equals(employeeList.get(i).getFirstName())
-						&& password_.equals(employeeList.get(i).getLastName())) {
-					Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
-					Scene scene = new Scene(root, 600, 600);
-					Stage stage = (Stage) pane.getScene().getWindow();
-					stage.setScene(scene);
-					found = true;
-					break;
-				}				
-			}*/
+		} else if (!employeeList.isEmpty()) {
 			for (Librarian librarian : employeeList) {
-				if(librarian.getFirstName().equals(username) && librarian.getLastName().equals(password_)) {
+				if (librarian.getFirstName().equals(username) && librarian.getLastName().equals(password_)) {
 					Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
 					Scene scene = new Scene(root, 600, 600);
 					Stage stage = (Stage) pane.getScene().getWindow();
 					stage.setScene(scene);
 					found = true;
 					break;
-					}				
+				}
 			}
 		}
-		if(!found) {
+		if (!found) {
 			System.out.println("Alert");
 			Alert alert = new Alert(Alert.AlertType.ERROR, "Username or Password incorrect");
-			alert.showAndWait();		
+			alert.showAndWait();
 		}
 	}
 }
