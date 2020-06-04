@@ -41,7 +41,7 @@ public class LibrarianSectionController {
 
     @FXML
     void issueBookBtn(ActionEvent event) throws IOException{
-    	Parent root = FXMLLoader.load(getClass().getResource("MainView.fxml"));
+    	Parent root = FXMLLoader.load(getClass().getResource("IssueBook.fxml"));
     	Scene scene = new Scene(root,600,600);
     	Stage stage = (Stage) addBookBtn.getScene().getWindow();
     	stage.setScene(scene);

@@ -8,10 +8,10 @@ public class Student {
 	private String Id;
 	private String contactNum;
 	/**
-	 * @param firstName
-	 * @param lastName
-	 * @param id
-	 * @param contactNum
+	 * @param firstName first name
+	 * @param lastName	last name
+	 * @param id		student id
+	 * @param contactNum student contact number
 	 */
 	public Student(String firstName, String lastName, String id, String contactNum) {
 		super();
@@ -20,6 +20,7 @@ public class Student {
 		Id = id;
 		this.contactNum = contactNum;
 	}
+	public Student() {}
 	/**
 	 * @return the firstName
 	 */
