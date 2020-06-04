@@ -24,57 +24,47 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class LibrarianLoginFormController {
-	
 
-	@FXML 
+	@FXML
 	private AnchorPane pane;
-	
-    @FXML
-    private PasswordField password;
 
-    @FXML
-    private TextField name;
+	@FXML
+	private PasswordField password;
 
-    @FXML
-    private Button loginBtn;
+	@FXML
+	private TextField name;
 
-    @FXML 
-    void login(ActionEvent event) throws IOException {
-    	
+	@FXML
+	private Button loginBtn;
 
-    	List<Librarian> employeeList = FileLoader.loadLibrarianFromFile();
+	@FXML
+
+	void login(ActionEvent event) throws IOException {
+
+		List<Librarian> employeeList = FileLoader.loadLibrarianFromFile();
 		String username = name.getText();
 		String password_ = password.getText();
-		
-		for(int i = 0; i < employeeList.size(); i ++) {
-			if(employeeList.get(i) != null) {
-				if(username.equals(employeeList.get(i).getFirstName()) && password_.equals(employeeList.get(i).getLastName())) {
+		boolean found = false;
+		if (employeeList.isEmpty()) {
+			System.out.println("Alert");
+			Alert alert = new Alert(Alert.AlertType.ERROR, "The librarian database is empty");
+			alert.showAndWait();
+		} else if (!employeeList.isEmpty()) {
+			for (Librarian librarian : employeeList) {
+				if (librarian.getFirstName().equals(username) && librarian.getLastName().equals(password_)) {
 					Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
-					Scene scene = new Scene(root,600,600);
+					Scene scene = new Scene(root, 600, 600);
 					Stage stage = (Stage) pane.getScene().getWindow();
 					stage.setScene(scene);
+					found = true;
+					break;
 				}
 			}
-			else {
-					System.out.println("Alert");
-					Alert alert = new Alert(Alert.AlertType.ERROR, "Please reenter");
-					alert.showAndWait();
-				}
 		}
-			}
-		
-    	
-    	
-    	// we give you a list of librarins
-	    	// 
-	    	/* Parent root = FXMLLoader.load(getClass().getResource("LibrarianSection.fxml"));
-	    	Scene scene = new Scene(root,600,600);
-	    	Stage stage = (Stage) pane.getScene().getWindow();
-	    	stage.setScene(scene);
-	    	*/
-		
-	    
-
-    }
-
-   
+		if (!found) {
+			System.out.println("Alert");
+			Alert alert = new Alert(Alert.AlertType.ERROR, "Username or Password incorrect");
+			alert.showAndWait();
+		}
+	}
+}
