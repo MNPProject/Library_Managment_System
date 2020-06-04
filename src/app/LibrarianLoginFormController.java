@@ -38,9 +38,7 @@ public class LibrarianLoginFormController {
     @FXML
     private Button loginBtn;
 
-    @FXML
-    
-    
+    @FXML 
     void login(ActionEvent event) throws IOException {
     	
 
