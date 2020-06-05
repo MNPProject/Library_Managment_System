@@ -60,4 +60,25 @@ public  class FileLoader {
 		return books2;
 	}
 
+    public static ArrayList<Book> getData(String fileName) {
+
+        ArrayList<Book> books2 = new ArrayList<>();
+        // FileInputStream fis;
+        try {
+            FileInputStream fis = new FileInputStream("src/books.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            books2 = (ArrayList<Book>) ois.readObject();				// SuppressWarnings
+
+            fis.close();
+            ois.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+        return books2;
+    }
+
 }
