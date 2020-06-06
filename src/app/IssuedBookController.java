@@ -56,9 +56,6 @@ public class IssuedBookController implements Initializable {
     ObservableList<IssuedBook> issuedBook;
     public ObservableList<IssuedBook> getIssuedBook() throws Exception{
         issuedBook = FXCollections.observableArrayList();
-//         issuedBook.add(new IssuedBook(1, "call", "studid", "name","contact", "date"));
-//        issuedBook.add(new IssuedBook(1, "nksks", "studsfdid", "nseame","isewsudata", "dajek"));
-//        issuedBook.add(new IssuedBook(1, "caldjjl", "studid", "nwame","issuderata", "skks"));
          Map<Student, ArrayList<Book>> issued = FileLoader.getIssuedBook();
         System.out.println("This line 63 executed");
          Set<Student> key = issued.keySet();
