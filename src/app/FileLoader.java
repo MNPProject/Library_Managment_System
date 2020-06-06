@@ -4,6 +4,8 @@ import javafx.scene.control.Alert;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public  class FileLoader {
 
@@ -52,7 +54,12 @@ public  class FileLoader {
 			fis.close();
 			ois.close();
 
-		} catch (IOException | ClassNotFoundException e) {
+		}
+		catch (EOFException e){
+		    return books2;
+        }
+
+		catch (IOException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -60,25 +67,30 @@ public  class FileLoader {
 		return books2;
 	}
 
-    public static ArrayList<Book> getData(String fileName) {
+    /**
+     *This method loads issued book data from file and return it
+     * Student is the key and the value is an arraylist of book they borrowed
+     * @return a map of Student and an arraylist of book
+     * @throws Exception
+     */
+    public static Map<Student, ArrayList<Book>> getIssuedBook() throws Exception{
+        Map<Student, ArrayList<Book>> readIssuedBook = null;
+        try{
+            FileInputStream file = new FileInputStream("src/IssuedBook.txt");
+            ObjectInputStream input = new ObjectInputStream(file);
+            readIssuedBook = (Map<Student, ArrayList<Book>>) input.readObject();
 
-        ArrayList<Book> books2 = new ArrayList<>();
-        // FileInputStream fis;
-        try {
-            FileInputStream fis = new FileInputStream("src/books.ser");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            books2 = (ArrayList<Book>) ois.readObject();				// SuppressWarnings
-
-            fis.close();
-            ois.close();
-
-        } catch (IOException | ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        }catch (FileNotFoundException e){
+            FileOutputStream outFile = new FileOutputStream("src/IssuedBook.txt");
+            ObjectOutputStream obj = new ObjectOutputStream(outFile);
+            return new HashMap<>();
         }
+        catch (EOFException e){
+            System.out.println("End of file exception is thrown");
+            return new HashMap<>();
+        }
+        return readIssuedBook;
 
-
-        return books2;
     }
 
 }

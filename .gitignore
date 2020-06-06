@@ -2,6 +2,8 @@
 src/books.ser
 src/module-info.java
 Librarian.txt
+src/META-INF/
+
 
 # Intellij
 .idea/
