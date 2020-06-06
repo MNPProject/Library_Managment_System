@@ -4,18 +4,18 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ViewBookController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ViewBookController">
    <children>
-      <TableView prefHeight="318.0" prefWidth="600.0">
+      <TableView fx:id="tableView" layoutX="26.0" layoutY="38.0" prefHeight="318.0" prefWidth="600.0">
         <columns>
           <TableColumn id="Id" fx:id="Id" prefWidth="50.0" text="Id" />
-          <TableColumn id="callno" fx:id="name" prefWidth="75.0" text="callno" />
-            <TableColumn id="name" fx:id="password" prefWidth="75.0" text="name" />
-            <TableColumn id="author" fx:id="address" prefWidth="75.0" text="Author" />
+          <TableColumn id="callno" fx:id="callno" prefWidth="75.0" text="callno" />
+            <TableColumn id="name" fx:id="name" prefWidth="75.0" text="name" />
+            <TableColumn id="author" fx:id="Author" prefWidth="75.0" text="Author" />
             <TableColumn id="publisher" fx:id="publisher" prefWidth="75.0" text="Publisher" />
             <TableColumn id="quantity" fx:id="quantity" prefWidth="75.0" text="quantity" />
             <TableColumn id="issued" fx:id="issued" prefWidth="75.0" text="issued" />
-            <TableColumn id="contact" fx:id="contact" prefWidth="75.0" text="added date" />
+            <TableColumn id="contact" fx:id="date" prefWidth="75.0" text="added date" />
         </columns>
       </TableView>
    </children>
