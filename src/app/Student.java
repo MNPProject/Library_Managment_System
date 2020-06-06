@@ -1,7 +1,9 @@
 package app;
 
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
 
 	private String firstName;
 	private String lastName;
@@ -14,7 +16,6 @@ public class Student {
 	 * @param contactNum student contact number
 	 */
 	public Student(String firstName, String lastName, String id, String contactNum) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		Id = id;
